@@ -5,9 +5,48 @@
   <meta charset="utf-8">
   <title>Analizador de texto</title>
   <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap" rel="stylesheet">
+  
 </head>
+
+<header>
+  <h1>Analizador de Texto</h1>
+</header>
 
 <body>
   <script src="index.js" type="module"></script>
+<br>
+<section>
+  <ul class="metrics">
+    <li data-testid="word-count"></li>
+    <li data-testid="character-count"></li>
+    <li data-testid="character-no-spaces-count"></li>
+    <li data-testid="number-count"></li>
+    <li data-testid="number-sum"></li>
+    <li data-testid="word-length-average"></li>
+  </ul>
+  <ul>
+    <li>caracteres</li>
+    <li>caracteres sin espacios</li>
+    <li>palabras</li>
+    <li>números</li>
+    <li>suma de números</li>
+    <li>promedio longitud</li>
+  </ul>
+</section> 
+<br>
+  <textarea name="user-input" placeholder="Ingresa aquí tu texto" onkeyup="contar()"></textarea>
+  <section>Caracteres: <span id="contarcaracteres">0</span></section>
+<br>
+  <button id="reset-button">Limpiar métricas</button>
+<br>
 </body>
+<br>
+<br>
+<footer>
+  &#169Alex Olalde
+</footer>
+
 </html>
