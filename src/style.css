@@ -1,11 +1,10 @@
 html {
-    height: 100%;
+    height: fit-content;
 }
 
 body {
     height: 100%;
     background-image: linear-gradient(to right top, #d16ba5, #c777b9, #ba83ca, #aa8fd8, #9a9ae1, #8aa7ec, #79b3f4, #69bff8, #52cffe, #41dfff, #46eefa, #5ffbf1);
-
     font-family: 'Montserrat', sans-serif;
 }
 
@@ -14,29 +13,40 @@ h1 {
     margin-left: auto;
     margin-right: auto;
     text-align: center;
-
 }
 
-li {
+.metricas {
     display: inline-block;
     margin: 0 0 0 60px;
     font-size: 18px;
     font-style: oblique;
+    background: white;
+}
+
+.titulos {
+    display: inline-block;
+    margin: 0 0 0 60px;
+    font-size: 18px;
+    font-style: oblique;
+    background: white;
 }
     
-textarea {
+[name= "user-input"] {
     font-family: 'Montserrat', sans-serif;
     display: block;
     margin-left: auto;
     margin-right: auto;
-    width: 500px;
-    height: 200px;
+    width: 480px;
+    height: 180px;
     font-size: 20px;
     font-weight: bold;
     border: none;
+    line-height: 1.6;
+    padding: 10px 10px;
+  
 }
 
-button {
+#reset-button {
     display: block;
     margin-left: auto;
     margin-right: auto;
@@ -51,15 +61,17 @@ button {
     background: white;
 }
 
-button:hover {
+#reset-button:hover {
     background-color: #d16ba5;
 }
 
-button:active {
-    background-color: #41dfff;
+#reset-button:active {
+    background-color: #5ffbf1;
 }
 
-footer {
+p {
     text-align: right;
     font-size: 15px;
+    margin-right: 10px;
+
 }

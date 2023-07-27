@@ -16,10 +16,9 @@
 </header>
 
 <body>
-  <script src="index.js" type="module"></script>
 <br>
 <section>
-  <ul class="metrics">
+  <ul class="metricas">
     <li data-testid="word-count"></li>
     <li data-testid="character-count"></li>
     <li data-testid="character-no-spaces-count"></li>
@@ -27,26 +26,29 @@
     <li data-testid="number-sum"></li>
     <li data-testid="word-length-average"></li>
   </ul>
-  <ul>
-    <li>caracteres</li>
-    <li>caracteres sin espacios</li>
-    <li>palabras</li>
-    <li>números</li>
-    <li>suma de números</li>
-    <li>promedio longitud</li>
+</section>
+<br>
+<section>
+  <ul class="titulos">
+    <li>Palabras</li>
+    <li>Caracteres</li>
+    <li>Caracteres sin espacios</li>
+    <li>Números</li>
+    <li>Suma de números</li>
+    <li>Promedio longitud</li>
   </ul>
 </section> 
 <br>
   <textarea name="user-input" placeholder="Ingresa aquí tu texto" onkeyup="contar()"></textarea>
-  <section>Caracteres: <span id="contarcaracteres">0</span></section>
 <br>
-  <button id="reset-button">Limpiar métricas</button>
+  <button id="reset-button" value="Limpiar">Limpiar métricas</button>
 <br>
+<script src="index.js" type="module"></script>
 </body>
 <br>
 <br>
 <footer>
-  &#169Alex Olalde
+  <p>&#169Alex Olalde</p>
 </footer>
 
 </html>
