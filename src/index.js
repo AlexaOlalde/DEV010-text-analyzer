@@ -7,40 +7,41 @@ import analyzer from './analyzer.js';
 const userInput = document.querySelector('textarea');
 const wordCount = document.querySelector('[data-testid="word-count"]');
 const characterCount = document.querySelector('[data-testid="character-count"]');
-const characterNoSpacesCount = document.querySelector('[data-testid="character-no-spaces-count"]');
+const characterNoSpaces = document.querySelector('[data-testid="character-no-spaces-count"]');
+//const characterNoSpacesCount = document.querySelector('[data-testid="character-no-spaces-count"]');
 const numberCount = document.querySelector('[data-testid="number-count"]');
 const numberSum = document.querySelector('[data-testid="number-sum"]');
-const wordLengthAverage = document.querySelector('[data-testid="word-length-average"]');
+const wordAverage = document.querySelector('[data-testid="word-length-average"]');
 
 //Estas variables almacenan los valores calculados a partir del texto que las usuarias ingresan en la textarea y después se usan para actualizar el contenido de los elementos del DOM seleccionados anteriormente.
-userInput.addEventListener('keyup', () => {
-  const text = userInput.value;
-  const words = text.match(/\b\p{L}+\b/gu) || [];
-  const characters = text.length;
-  const charactersNoSpaces = text.replace(/\s/g, '').length;
-  const numbers = text.match(/\d+/g) || [];
-  const numbersSum = numbers.reduce((acc, num) => acc + parseInt(num), 0);
-  const wordLengths = words.map(word => word.length);
-  const wordLengthsSum = wordLengths.reduce((acc, len) => acc + len, 0);
-  const wordLengthsAverage = wordLengths.length ? (wordLengthsSum / wordLengths.length).toFixed(2) : 0;
+userInput.addEventListener('keyup', updateMetrics);
 
-  wordCount.textContent = ` ${words.length}`;
-  characterCount.textContent = ` ${characters}`;
-  characterNoSpacesCount.textContent = ` ${charactersNoSpaces}`;
-  numberCount.textContent = ` ${numbers.length}`;
-  numberSum.textContent = ` ${numbersSum}`;
-  wordLengthAverage.textContent = ` ${wordLengthsAverage}`;
-});
+function updateMetrics() {
+  const text = userInput.value;
+  const wordCountVal = analyzer.getWordCount(text);
+  const characterCountVal = analyzer.getCharacterCount(text);
+  const characterNoSpacesVal = analyzer.getCharacterCountExcludingSpaces(text);
+  const numberCountVal = analyzer.getNumberCount(text);
+  const numberSumVal = analyzer.getNumberSum(text);
+  const wordAverageVal = analyzer.getAverageWordLength(text);
+  
+  wordCount.textContent = ` ${wordCountVal}`;
+  characterCount.textContent = ` ${characterCountVal}`;
+  characterNoSpaces.textContent = ` ${characterNoSpacesVal}`;
+  numberCount.textContent = ` ${numberCountVal}`;
+  numberSum.textContent = ` ${numberSumVal}`;
+  wordAverage.textContent = ` ${wordAverageVal}`;
+}
 /*Se pasa el argumento adecuado para cada función. En casi todas va text porque estas funciones recibiran un texto como argumento. La función getNumberSum espera un arreglo de números como argumento y por eso se le pone numbers.*/
 const resetbutton = document.getElementById('reset-button');
 resetbutton.addEventListener('click', () => {
   userInput.value = '';
   wordCount.textContent = '';
   characterCount.textContent = '';
-  characterNoSpacesCount.textContent = '';
+  characterNoSpaces.textContent = '';
   numberCount.textContent = '';
   numberSum.textContent = '';
-  wordLengthAverage.textContent = '';
+  wordAverage.textContent = '';
 });
 
 
