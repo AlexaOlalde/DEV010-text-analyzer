@@ -15,7 +15,6 @@ const wordAverage = document.querySelector('[data-testid="word-length-average"]'
 
 //Estas variables almacenan los valores calculados a partir del texto que las usuarias ingresan en la textarea y después se usan para actualizar el contenido de los elementos del DOM seleccionados anteriormente.
 userInput.addEventListener('keyup', updateMetrics);
-
 function updateMetrics() {
   const text = userInput.value;
   const wordCountVal = analyzer.getWordCount(text);

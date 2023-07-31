@@ -20,22 +20,23 @@ h1 {
     text-align: center;
 }
 
-/*.metricas {
-    display: inline;
+.metrics {
+    display: block;
     margin: 0 0 0 60px;
+    padding: 10px;
     font-size: 18px;
     font-style: oblique;
-    background: white;
-}*/
+}
 
-li {
-    display: inline;
+.metric-title {
+    display: block;
     margin: 0 0 0 60px;
+    padding: 10px;
     font-size: 18px;
     font-style: oblique;
 }
     
-textarea[name= "user-input"] {
+textarea[name="user-input"] {
     font-family: 'Montserrat', sans-serif;
     display: block;
     margin-left: auto;
@@ -47,7 +48,6 @@ textarea[name= "user-input"] {
     border: none;
     line-height: 1.6;
     padding: 10px 10px;
-  
 }
 
 #reset-button {

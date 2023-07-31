@@ -19,8 +19,14 @@ const analyzer = {
   },
   getCharacterCountExcludingSpaces: (text) => {
     const spaceRegex = /\s/g;
+    const noPunctuation = /[^a-zA-Z0-9]/g;
     const charactersWithoutSpaces = text.replace(spaceRegex, '');
-    return charactersWithoutSpaces.length;
+    const cleanText = charactersWithoutSpaces.replace(noPunctuation, '');
+    return cleanText.length;
+    
+    //const spaceRegex = /[.,!?;:]/g;
+    //const charactersWithoutSpaces = text.replace(spaceRegex, '');
+    //return charactersWithoutSpaces.length;
     //const charactersNoSpaces = text.replace(/\s/g, '').length;
     //return charactersNoSpaces;
     //TODO: esta función debe retornar el recuento de caracteres excluyendo espacios y signos de puntuación que se encuentran en el parámetro `text` de tipo `string`.
@@ -43,7 +49,6 @@ const analyzer = {
 
     return parseFloat((totalLength / words.length).toFixed(2));*/
 
-
     /*getAverageWordLength: (text) => {
   const words = text.split(/\W+/).filter(word => word !== "");
   const wordLengths = words.map(word => word.length);
@@ -58,7 +63,6 @@ const analyzer = {
   return parseFloat(averageLength.toFixed(2));
 }*/
 
-  
     /*const wordLengths = words.map(word => word.length);
     const wordLengthsSum = wordLengths.reduce((acc, len) => acc + len, 0);
     const wordLengthsAverage = wordLengths.length ? (wordLengthsSum / wordLengths.length).toFixed(2) : 0;
@@ -84,12 +88,30 @@ const analyzer = {
     //}
   },
   getNumberCount: (text) => {
-    const numberRegex = /\d+/g;
-    const numbers = text.match(numberRegex);
+    // const numbers = text.match(/\b[-+]?\d+(\.\d+)?\b/g);
+    const numbers = text.split(' ')
     if (numbers === null) {
       return 0;
+    }  
+    let sum = 0
+    for (let i = 0; i < numbers.length; i++) {
+      const miNum = numbers[i]
+      // const numMi = Number(miNum)
+      // sum = sum + numMi;
+      if(Number(miNum)){
+        sum = sum + 1
+      }
     }
-    return numbers.length;
+    //paeseFloat
+    return parseFloat(sum);
+
+    //const numberRegex = /\d+/g;
+    //const numbers = text.match(/(?<!\S)[-+]?\b\d+(?:\.\d+)?\b(?!\S)/g);
+    //const decimals = text.match()
+    //if (numbers === null) {
+    //return 0;
+    //}
+    //return numbers.length;
     
     //return numbers ? numbers.length : 0;    
     //const numbers = text.match(/\d+/g) || [];
@@ -97,16 +119,28 @@ const analyzer = {
     //TODO: esta función debe retornar cúantos números se encuentran en el parámetro `text` de tipo `string`.
   },
   getNumberSum: (text) => {
-    const numberRegex = /\d+/g;
-    const numbers = text.match(numberRegex);
-
-    let sum = 0;
-    if (numbers !== null) {
-      for (let i = 0; i < numbers.length; i++) {
-        sum += parseInt(numbers[i]);
-      }
+    const numbers = text.match(/\b[-+]?\d+(\.\d+)?\b/g);
+    if (numbers === null) {
+      return 0;
+    }  
+    let sum = 0
+    for (let i = 0; i < numbers.length; i++) {
+      const miNum = numbers[i]
+      const numMi = Number(miNum)
+      sum = sum + numMi;
     }
     return sum;
+
+    //const numberRegex = /\d+/g;
+    //const numbers = text.match(/\b[-+]?\d+(\.\d+)?\b/g);
+    //let sum = 0;
+    //if (numbers === null) {
+    //for (let i = 0; i < numbers.length; i++) {
+    //sum += parseInt(numbers[i]);
+    //}
+    //}
+    //return sum;
+
     //const numberRegex = /\d+/g;
     //const numbers = text.match(numberRegex);
     //if (!numbers) return 0;
