@@ -1,0 +1,132 @@
+html {
+    height: fit-content;
+}
+
+header{
+    background-image: linear-gradient(to right top, #d16ba5, #c777b9, #ba83ca, #aa8fd8, #9a9ae1, #8aa7ec, #79b3f4, #69bff8, #52cffe, #41dfff, #46eefa, #5ffbf1);
+    font-family: 'Montserrat', sans-serif;
+    border-radius: 5px;
+}
+
+body { 
+    min-height: 100vh; /*vh es una unidad de medida en CSS que representa el porcentaje de la altura del viewport (ventana del navegador). La ventana del navegador es el área visible en el dispositivo del usuario que muestra el contenido web. La altura del viewport es la altura total de esta ventana.*/
+    background-image: linear-gradient(to right top, #d16ba5, #c777b9, #ba83ca, #aa8fd8, #9a9ae1, #8aa7ec, #79b3f4, #69bff8, #52cffe, #41dfff, #46eefa, #5ffbf1);
+    font-family: 'Montserrat', sans-serif;
+}
+
+h1 {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+
+.metrics {
+    display: inline-flex;
+    list-style: none;
+    margin: 0 5px 0 50px;
+    padding: 0px;
+    font-size: 18px;
+    font-style: oblique;
+    text-align: center;
+}
+    
+textarea[name="user-input"] {
+    font-family: 'Montserrat', sans-serif;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 480px;
+    height: 180px;
+    font-size: 20px;
+    font-weight: bold;
+    border: none;
+    line-height: 1.6;
+    padding: 10px 10px;
+    border-radius: 5px;
+}
+
+#reset-button {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+    border: none;
+    border-radius: 5px;
+    width: 150px;
+    height: 50px;
+    background: white;
+}
+
+#reset-button:hover {
+    background-color: #d16ba5;
+    color: white;
+}
+
+#reset-button:active {
+    background-color: #5ffbf1;
+}
+
+footer {
+    text-align: right;
+    font-size: 15px;
+    margin-right: 10px;
+}
+
+/*.metrics1 {
+    display: inline-block;
+    margin: 0 0 0 85px;
+    padding: 2px;
+    font-size: 18px;
+    font-style: oblique;
+}
+
+.metrics2 {
+    display: inline-block;
+    margin: 0 0 0 125px;
+    padding: 2px;
+    font-size: 18px;
+    font-style: oblique;
+}
+
+.metrics3 {
+    display: inline-block;
+    margin: 0 0 0 180px;
+    padding: 2px;
+    font-size: 18px;
+    font-style: oblique;
+}
+
+.metrics4 {
+    display: inline-block;
+    margin: 0 0 0 170px;
+    padding: 2px;
+    font-size: 18px;
+    font-style: oblique;
+}
+
+.metrics5 {
+    display: inline-block;
+    margin: 0 0 0 170px;
+    padding: 2px;
+    font-size: 18px;
+    font-style: oblique;
+}
+
+.metrics6 {
+    display: inline-block;
+    margin: 0 0 0 190px;
+    padding: 2px;
+    font-size: 18px;
+    font-style: oblique;
+}
+
+.metrics-list {
+    display: flex;
+    list-style: none;
+    padding: 0;
+}*/
+

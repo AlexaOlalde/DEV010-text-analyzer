@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>Analizador de texto</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap" rel="stylesheet">
+  
+</head>
+
+<header>
+  <h1>Analizador de Texto</h1>
+</header>
+
+<body>
+<section>
+<br> 
+<ul class="metrics-list">
+  <li class="metrics" data-testid="word-count">Palabras</li>
+  <li class="metrics" data-testid="character-count">Caracteres</li>
+  <li class="metrics" data-testid="character-no-spaces-count">Caracteres sin espacios</li>
+  <li class="metrics" data-testid="number-count">Números</li>
+  <li class="metrics" data-testid="number-sum">Suma de números</li>
+  <li class="metrics" data-testid="word-length-average">Promedio longitud</li>
+</ul>
+</section>
+<br>
+  <textarea name="user-input" placeholder="Ingresa aquí tu texto" onkeyup="contar()"></textarea>
+<br>
+  <button id="reset-button" value="Limpiar">Limpiar métricas</button>
+<br>
+<script src="index.js" type="module"></script>
+</body>
+<br>
+<br>
+<footer>
+  <p>&#169Alex Olalde</p>
+</footer>
+
+</html>
+
+<!--<section>
+  <ul class="titles">
+    <li class="metrics"></li>
+    <li class="metrics"></li>
+    <li class="metrics"></li>
+    <li class="metrics"></li>
+    <li class="metrics"></li>
+    <li class="metrics"></li>
+  </ul>-->
