@@ -24,12 +24,12 @@ function updateMetrics() {
   const numberSumVal = analyzer.getNumberSum(text);
   const wordAverageVal = analyzer.getAverageWordLength(text);
   
-  wordCount.textContent = ` ${wordCountVal}`;
-  characterCount.textContent = ` ${characterCountVal}`;
-  characterNoSpaces.textContent = ` ${characterNoSpacesVal}`;
-  numberCount.textContent = ` ${numberCountVal}`;
-  numberSum.textContent = ` ${numberSumVal}`;
-  wordAverage.textContent = ` ${wordAverageVal}`;
+  wordCount.textContent = `Palabras: ${wordCountVal}`;
+  characterCount.textContent = `Caracteres: ${characterCountVal}`;
+  characterNoSpaces.textContent = `Caracteres sin espacios: ${characterNoSpacesVal}`;
+  numberCount.textContent = `Números: ${numberCountVal}`;
+  numberSum.textContent = `Suma de números: ${numberSumVal}`;
+  wordAverage.textContent = `Promedio longitud: ${wordAverageVal}`;
 }
 /*Se pasa el argumento adecuado para cada función. En casi todas va text porque estas funciones recibiran un texto como argumento. La función getNumberSum espera un arreglo de números como argumento y por eso se le pone numbers.*/
 const resetbutton = document.getElementById('reset-button');
