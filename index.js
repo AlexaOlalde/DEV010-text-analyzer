@@ -35,12 +35,12 @@ function updateMetrics() {
 const resetbutton = document.getElementById('reset-button');
 resetbutton.addEventListener('click', () => {
   userInput.value = '';
-  wordCount.textContent = '';
-  characterCount.textContent = '';
-  characterNoSpaces.textContent = '';
-  numberCount.textContent = '';
-  numberSum.textContent = '';
-  wordAverage.textContent = '';
+  wordCount.textContent = `Palabras: 0`;
+  characterCount.textContent = `Caracteres: 0`;
+  characterNoSpaces.textContent = `Caracteres sin espacios: 0`;
+  numberCount.textContent = `Números: 0`;
+  numberSum.textContent = `Suma de números: 0`;
+  wordAverage.textContent = `Promedio longitud: 0`;
 });
 
 
